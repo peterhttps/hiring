@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from "recharts";
-import { DateButton, Wrapper, ContainerDate, FilterButton } from "./styles";
+import { DateButton, Wrapper, ContainerDate } from "./styles";
 
 import DatePicker from "react-datepicker";
 
@@ -8,6 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import { registerLocale } from "react-datepicker";
 import us from "date-fns/locale/en-US";
+import { ActionButton } from "../Global/styles";
 registerLocale("en-US", us);
 
 function StockGraph({ data }) {
@@ -131,7 +132,7 @@ function StockGraph({ data }) {
                     ref={ref}
 
                 />
-                <FilterButton onClick={() => changeData()}>filter</FilterButton>
+                <ActionButton onClick={() => changeData()}>Filter</ActionButton>
             </ContainerDate>
         </Wrapper>
     );

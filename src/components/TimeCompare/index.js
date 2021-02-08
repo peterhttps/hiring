@@ -3,10 +3,11 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import { Wrapper, Container, DatePickerContainer, ResultContainer, ConfirmButton, DateButton } from "./styles";
+import { Wrapper, Container, DatePickerContainer, ResultContainer, DateButton } from "./styles";
 
 import { registerLocale } from  "react-datepicker";
 import us from 'date-fns/locale/en-US';
+import { ActionButton } from "../Global/styles";
 registerLocale('en-US', us)
 
 function TimeCompare({data}) {
@@ -71,7 +72,7 @@ function TimeCompare({data}) {
                 customInput={<CustomDatePicker />}
                 ref={ref}
             />
-            <ConfirmButton onClick={() => timeCompare()}>Calculate</ConfirmButton>
+            <ActionButton onClick={() => timeCompare()}>Calculate</ActionButton>
             </DatePickerContainer>
             <ResultContainer>
               <h1>$ {finalValue}</h1>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import LoadingSpin from 'react-loading-spin';
 
 import {
     Wrapper,
@@ -12,6 +13,7 @@ import TopBar from "../../components/TopBar";
 import { useParams, useHistory } from "react-router-dom";
 
 import api from "../../services/api";
+import { LoadingSpinContainer } from "../../components/Global/styles";
 
 function ResultPage() {
     let { id } = useParams();
@@ -43,6 +45,8 @@ function ResultPage() {
             <Container>
                 <TopBar />
                 <WrapperSearch>
+                    {!loading ? 
+                    <div>
                     <SearchInfos>
                         <button onClick={() => history.push("/")}>
                             {"<-"} Search Again
@@ -65,6 +69,8 @@ function ResultPage() {
                             })
                         )}
                     </ContainerSearch>
+                    </div>
+                    : <LoadingSpinContainer><LoadingSpin /></LoadingSpinContainer>}
                 </WrapperSearch>
             </Container>
         </Wrapper>

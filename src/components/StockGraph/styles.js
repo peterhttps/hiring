@@ -23,12 +23,3 @@ export const DateButton = styled.button`
 
 `;
 
-export const FilterButton = styled.button`
-    background: ${props => props.theme.colors.c400};
-    padding: 5px 10px;
-    color: #FFF;
-    border-radius: 4px;
-    border: none;
-    margin: 0 .5rem;
-`;
-
