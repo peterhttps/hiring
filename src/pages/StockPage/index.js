@@ -2,10 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoadingSpin from 'react-loading-spin';
 
-import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-  } from 'recharts';
-
 import { Wrapper, Container, WrapperStock, ContainerStock, ContainerStockInfos, StockTitle, StockPrice } from "./styles";
 import TopBar from "../../components/TopBar";
 
@@ -13,6 +9,7 @@ import api from '../../services/api';
 import StockGraph from "../../components/StockGraph";
 import TimeCompare from "../../components/TimeCompare";
 import StockCompare from "../../components/StockCompare";
+import StockAdd from "../../components/StockAdd";
 import { LoadingSpinContainer } from "../../components/Global/styles";
 
 function StockPage() {
@@ -26,13 +23,10 @@ function StockPage() {
         async function getStock() {
             const resultInterday = await api.get(`?function=GLOBAL_QUOTE&symbol=${id}&apikey=7MN1KILIT0TIGGLR`);
             const resultDaily = await api.get(`?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${id}&outputsize=full&apikey=7MN1KILIT0TIGGLR`);
-
-            //console.log(resultDaily);
-            //console.log(resultInterday.data["Global Quote"]);
-            setStockInfos(resultInterday.data["Global Quote"]);
             const timeSeries = resultDaily.data["Time Series (Daily)"];
+            
+            setStockInfos(resultInterday.data["Global Quote"]); 
             setGraphInfos(timeSeries);
-            //console.log(timeSeries);
             setLoadingStockInfos(false);
             
         }
@@ -59,6 +53,7 @@ function StockPage() {
                             {!loadingStockInfos && <h2> $ {parseValueToFloat(stockInfos["05. price"])}</h2>}
                             </div>
                         </StockPrice>
+                        {!loadingStockInfos && <StockAdd actualStock={id} />}
                         <ContainerStockInfos>
                             <div>
                                 <p>open</p>
@@ -81,9 +76,11 @@ function StockPage() {
                                 {!loadingStockInfos && <h1>{stockInfos["07. latest trading day"]}</h1>}
                             </div>
                         </ContainerStockInfos>
-                        {!loadingStockInfos && <StockGraph data={graphInfos}/>}
-                        {!loadingStockInfos && <TimeCompare data={graphInfos}/>}
-                        {!loadingStockInfos && <StockCompare actualStockData={stockInfos}/>}
+                        {!loadingStockInfos && <StockGraph data={graphInfos} />}
+                        {!loadingStockInfos && <TimeCompare data={graphInfos} />}
+                        {!loadingStockInfos && <StockCompare actualStockData={stockInfos} />}
+                        
+
                        
                     </ContainerStock>
                      : <LoadingSpinContainer><LoadingSpin/></LoadingSpinContainer>}

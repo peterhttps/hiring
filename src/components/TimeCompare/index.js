@@ -3,7 +3,9 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import { Wrapper, Container, DatePickerContainer, ResultContainer, DateButton } from "./styles";
+import { Wrapper, Container, DatePickerContainer, ResultContainer } from "./styles";
+import { DateButton } from '../Global/styles'
+
 
 import { registerLocale } from  "react-datepicker";
 import us from 'date-fns/locale/en-US';
@@ -13,13 +15,13 @@ registerLocale('en-US', us)
 function TimeCompare({data}) {
     const [dateFromGlobal, setDateFromGlobal] = useState(new Date());
     const [dateToGlobal, setDateToGlobal] = useState(new Date());
-    const [finalValue, setFinalValue] = useState("");
+    const [finalValue, setFinalValue] = useState(false);
 
     const ref = React.createRef();
 
     const CustomDatePicker = React.forwardRef(({ value, onClick }, ref) => (
       <DateButton onClick={onClick} ref={ref}>{value}</DateButton>
-  ));
+    ));
 
     function timeCompare() {
       const days = Object.keys(data);
@@ -30,7 +32,6 @@ function TimeCompare({data}) {
       var to = 0;
 
       for (var i = 0; i < days.length - 1; i++) {
-        // console.log(days[i]);
         if (days[i] === dateFrom) {
             console.log("eh igua");
             from = i;
@@ -49,13 +50,13 @@ function TimeCompare({data}) {
     }
 
 
-
     return (
         <Wrapper>
           <h1>Time Compare</h1>
           <hr />
           <Container>
             <DatePickerContainer>
+              <p>Purchase date: </p>
             <DatePicker
                 selected={dateFromGlobal}
                 onChange={(date) => setDateFromGlobal(date)}
@@ -64,6 +65,7 @@ function TimeCompare({data}) {
                 customInput={<CustomDatePicker />}
                 ref={ref}
             />
+            <p>Sell date: </p>
             <DatePicker
                 selected={dateToGlobal}
                 onChange={(date) => setDateToGlobal(date)}
@@ -74,10 +76,10 @@ function TimeCompare({data}) {
             />
             <ActionButton onClick={() => timeCompare()}>Calculate</ActionButton>
             </DatePickerContainer>
-            <ResultContainer>
+            {finalValue && <ResultContainer>
               <h1>$ {finalValue}</h1>
             </ResultContainer>
-            
+            }
             </Container>
         </Wrapper>
     );

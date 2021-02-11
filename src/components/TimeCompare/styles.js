@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     margin-top: 5rem;
+
+    @media only screen and (max-width: 900px) {
+        & {
+            padding: 0 1rem;
+        }
+    }
 `;
 
 export const Container = styled.div`
@@ -9,6 +15,12 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media only screen and (max-width: 900px) {
+        & {
+            flex-direction: column;
+        }
+    }
 `;
 
 export const DatePickerContainer = styled.div`
@@ -18,14 +30,10 @@ export const DatePickerContainer = styled.div`
 export const ResultContainer = styled.div`
     background: ${props => props.theme.secundary};
     padding: 2rem 7rem;
-`;
 
-export const DateButton = styled.button`
-    background: #1A5684;
-    padding: 5px 10px;
-    color: #FFF;
-    border-radius: 4px;
-    border: none;
-    margin: 0 .5rem;
-
+    @media only screen and (max-width: 900px) {
+        & {
+            margin-top: 2rem;
+        }
+    }
 `;

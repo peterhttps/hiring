@@ -45,7 +45,12 @@ export const SearchInfos = styled.div`
         }
 
     }
-
+    
+    @media only screen and (max-width: 900px) {
+        & h1 {
+            font-size: 1.5rem;
+        }
+    }
 `;
 
 export const ContainerSearch = styled.div`
@@ -68,5 +73,11 @@ export const ResultBox = styled.div`
 
     &:hover {
         background: ${props => props.theme.colors.c500};
+    }
+
+    @media only screen and (max-width: 900px) {
+        & {
+            width: 90%;
+        }
     }
 `;

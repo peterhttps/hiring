@@ -27,6 +27,11 @@ export const WrapperStock = styled.div`
 
 export const ContainerStock = styled.div`
     margin-top: 2rem;
+    @media only screen and (max-width: 900px) {
+        & {
+            max-width: 100%;
+        }
+    }
 `;
 
 export const StockTitle = styled.h1`
@@ -67,6 +72,14 @@ export const ContainerStockInfos = styled.div`
         }
     }
 
-    & div:last-child {
+    @media only screen and (max-width: 900px) {
+        & {
+            flex-direction: column;
+            max-width: 90%;
+            margin: 3rem auto;
+        }
+        & div {
+            margin-bottom: 1rem;
+        }
     }
 `;

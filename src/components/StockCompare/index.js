@@ -5,7 +5,6 @@ import { Wrapper, Container, CompareStockInputs, CompareContainer, StockBlock, S
 import { ActionButton } from '../Global/styles';
 
 function StockCompare({ actualStockData }) {
-    const [actualData, setActualData] = useState([]);
     const [compareData, setCompareData] = useState([]);
     const [compareStockName, setCompareStockName] = useState("");
     const [showing, setShowing] = useState(false);
