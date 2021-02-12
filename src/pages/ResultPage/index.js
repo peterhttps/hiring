@@ -24,7 +24,7 @@ function ResultPage() {
     useEffect(() => {
         async function getSearch() {
             const result = await api.get(
-                `?function=SYMBOL_SEARCH&keywords=${id}&apikey=${process.env.REACT_APP_KEY}`
+                `?function=SYMBOL_SEARCH&keywords=${id}&apikey=${process.env.REACT_APP_ALPHA_API_KEY}`
             );
 
             setLoading(false);
