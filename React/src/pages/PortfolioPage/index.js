@@ -33,7 +33,7 @@ function PortfolioPage() {
                 <TopBar />
                 <WrapperPortfolio>
                     <h1>My Stocks</h1>
-                    {isZeroSized && <h2>You have no action added</h2>}
+                    {isZeroSized && <h2>You have no stock added</h2>}
                     {!isEmpty && (
                         <ContainerPortfolio>
                             {stocks.map((stock) => {
