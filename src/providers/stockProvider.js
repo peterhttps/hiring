@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 export const StockContext = React.createContext({});
 
 
-export const StcokProvider = (props) => {
+export const StockProvider = (props) => {
     const [stocks, setStocks] = useState(JSON.parse(localStorage.getItem('stocks')) || []);
 
     useEffect(() => {

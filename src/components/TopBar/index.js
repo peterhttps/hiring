@@ -14,12 +14,12 @@ function TopBar() {
   const [isLight, setIsLight] = useState(true);
 
   useEffect(() => {
-    if (theme.name === "light") {
+    if (theme?.name === "light") {
       setIsLight(true);
     } else {
       setIsLight(false);
     }
-  }, [isLight, theme.name]);
+  }, [isLight, theme?.name]);
 
   function modeClick() {
     if (theme.name === "light") {
@@ -37,7 +37,7 @@ function TopBar() {
           : <FiMoon color="#FFFFFF" size={24}/>}
           </button>
         <div onClick={() => history.push("/portfolio")}>
-          <h2>Meu Portfólio</h2>
+          <h2>My Portfólio</h2>
         </div>
     </ContainerTopBar>
   );

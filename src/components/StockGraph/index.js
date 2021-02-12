@@ -33,7 +33,7 @@ function StockGraph({ data }) {
 
     const days = Object.keys(data);
     var i = 0;
-    for (i; i < 100; i++) {
+    for (i; i < 30; i++) {
       const values = data[days[i]];
       const dataCell = {
         date: days[i],
@@ -49,9 +49,6 @@ function StockGraph({ data }) {
   function changeData() {
     const days = Object.keys(data);
 
-    console.log(dateFromGlobal.toISOString().slice(0, 10));
-    console.log(dateToGlobal.toISOString().slice(0, 10));
-
     const dateFrom = dateFromGlobal.toISOString().slice(0, 10);
     const dateTo = dateToGlobal.toISOString().slice(0, 10);
     var from = 0;
@@ -59,11 +56,9 @@ function StockGraph({ data }) {
 
     for (var i = 0; i < days.length - 1; i++) {
       if (days[i] === dateFrom) {
-        console.log("eh igua");
         from = i;
       }
       if (days[i] === dateTo) {
-        console.log("eh igua tb");
         to = i;
       }
     }
@@ -77,9 +72,7 @@ function StockGraph({ data }) {
       };
       dateStock.push(dataCell);
     }
-    console.log(dateStock);
     setGraphData(dateStock.reverse());
-    console.log(to, from);
   }
 
   const CustomDatePicker = React.forwardRef(({ value, onClick }, ref) => (

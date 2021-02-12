@@ -1,0 +1,357 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render SearchPage component 1`] = `
+<div
+  className="sc-gsTCUz bCAtYS"
+>
+  <div
+    className="sc-dlfnbm bFdpYG"
+  >
+    <div
+      className="sc-jSgupP eYLJnf"
+    >
+      <button
+        onClick={[Function]}
+      >
+        <svg
+          color="#FFFFFF"
+          fill="none"
+          height={24}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+          />
+        </svg>
+      </button>
+      <div
+        onClick={[Function]}
+      >
+        <h2>
+          My Portfólio
+        </h2>
+      </div>
+    </div>
+    <div
+      className="sc-hKgILt bOfHVR"
+    >
+      <div
+        className="sc-eCssSg dfpGNO"
+      >
+        <h1>
+          Stock Market
+        </h1>
+        <input
+          onChange={[Function]}
+          onKeyPress={[Function]}
+          placeholder="Search a Stock..."
+          type="text"
+          value=""
+        />
+        <p>
+          Example: ibm, microsoft, tesla
+        </p>
+        <button
+          onClick={[Function]}
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render SockGraph component 1`] = `
+<div
+  className="sc-dmlrTW fBJuBq"
+>
+  <div
+    className="sc-kfzAmx jOiRlD"
+  >
+    <p>
+      From: 
+    </p>
+    <div
+      className="react-datepicker-wrapper"
+    >
+      <div
+        className="react-datepicker__input-container"
+      >
+        <button
+          className="sc-bqyKva eRzpRF"
+          onClick={[Function]}
+        >
+          2021-02-12
+        </button>
+      </div>
+    </div>
+    <p>
+      To: 
+    </p>
+    <div
+      className="react-datepicker-wrapper"
+    >
+      <div
+        className="react-datepicker__input-container"
+      >
+        <button
+          className="sc-bqyKva eRzpRF"
+          onClick={[Function]}
+        >
+          2021-02-12
+        </button>
+      </div>
+    </div>
+    <button
+      className="sc-crrsfI YSOOT"
+      onClick={[Function]}
+    >
+      Filter
+    </button>
+  </div>
+</div>
+`;
+
+exports[`render StockAdd component 1`] = `
+<div
+  className="sc-hiSbYr fYaTal"
+>
+  <button
+    className="sc-crrsfI YSOOT"
+    onClick={[Function]}
+  >
+    Add to Portfolio
+  </button>
+</div>
+`;
+
+exports[`render StockPage component 1`] = `
+<div
+  className="sc-hBEYos ftRKSd"
+>
+  <div
+    className="sc-fodVxV emhgxZ"
+  >
+    <div
+      className="sc-jSgupP eYLJnf"
+    >
+      <button
+        onClick={[Function]}
+      >
+        <svg
+          color="#FFFFFF"
+          fill="none"
+          height={24}
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          style={
+            Object {
+              "color": "#FFFFFF",
+            }
+          }
+          viewBox="0 0 24 24"
+          width={24}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="5"
+          />
+          <line
+            x1="12"
+            x2="12"
+            y1="1"
+            y2="3"
+          />
+          <line
+            x1="12"
+            x2="12"
+            y1="21"
+            y2="23"
+          />
+          <line
+            x1="4.22"
+            x2="5.64"
+            y1="4.22"
+            y2="5.64"
+          />
+          <line
+            x1="18.36"
+            x2="19.78"
+            y1="18.36"
+            y2="19.78"
+          />
+          <line
+            x1="1"
+            x2="3"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="21"
+            x2="23"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="4.22"
+            x2="5.64"
+            y1="19.78"
+            y2="18.36"
+          />
+          <line
+            x1="18.36"
+            x2="19.78"
+            y1="5.64"
+            y2="4.22"
+          />
+        </svg>
+      </button>
+      <div
+        onClick={[Function]}
+      >
+        <h2>
+          My Portfólio
+        </h2>
+      </div>
+    </div>
+    <div
+      className="sc-fFubgz fediFZ"
+    >
+      <div
+        className="sc-dQppl kDMKwn"
+      >
+        <div
+          className="loading"
+          style={
+            Object {
+              "animationDirection": "normal",
+              "animationDuration": "1.4s",
+              "animationTimingFunction": "ease-in-out",
+              "borderColor": "#cccccc",
+              "borderLeftColor": "#1ecd96",
+              "borderTopColor": "#1ecd96",
+              "borderWidth": "6px",
+              "height": "60px",
+              "width": "60px",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render TimeCompare component 1`] = `
+<div
+  className="sc-fKFyDc fWXiWs"
+>
+  <h1>
+    Time Compare
+  </h1>
+  <hr />
+  <div
+    className="sc-bBXqnf bVmiJm"
+  >
+    <div
+      className="sc-iwyYcG dVMvYW"
+    >
+      <p>
+        Purchase date: 
+      </p>
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <button
+            className="sc-bqyKva eRzpRF"
+            onClick={[Function]}
+          >
+            2021-02-12
+          </button>
+        </div>
+      </div>
+      <p>
+        Sell date: 
+      </p>
+      <div
+        className="react-datepicker-wrapper"
+      >
+        <div
+          className="react-datepicker__input-container"
+        >
+          <button
+            className="sc-bqyKva eRzpRF"
+            onClick={[Function]}
+          >
+            2021-02-12
+          </button>
+        </div>
+      </div>
+      <button
+        className="sc-crrsfI YSOOT"
+        onClick={[Function]}
+      >
+        Calculate
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render TopBar component 1`] = `
+<div
+  className="sc-jSgupP eYLJnf"
+>
+  <button
+    onClick={[Function]}
+  >
+    <svg
+      color="#FFFFFF"
+      fill="none"
+      height={24}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": "#FFFFFF",
+        }
+      }
+      viewBox="0 0 24 24"
+      width={24}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+      />
+    </svg>
+  </button>
+  <div
+    onClick={[Function]}
+  >
+    <h2>
+      My Portfólio
+    </h2>
+  </div>
+</div>
+`;

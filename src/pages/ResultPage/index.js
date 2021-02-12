@@ -26,7 +26,9 @@ function ResultPage() {
             const result = await api.get(
                 `?function=SYMBOL_SEARCH&keywords=${id}&apikey=${process.env.REACT_APP_ALPHA_API_KEY}`
             );
-
+            if (!result.data.bestMatches) {
+                history.push("/");
+            }
             setLoading(false);
             for (var keys in result.data.bestMatches) {
                 // eslint-disable-next-line no-loop-func
@@ -38,7 +40,7 @@ function ResultPage() {
         }
 
         getSearch();
-    }, [id]);
+    }, [id, history]);
 
     return (
         <Wrapper>

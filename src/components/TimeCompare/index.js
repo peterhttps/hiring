@@ -24,7 +24,7 @@ function TimeCompare({data}) {
     ));
 
     function timeCompare() {
-      const days = Object.keys(data);
+      const days = Object?.keys(data);
 
       const dateFrom = dateFromGlobal.toISOString().slice(0, 10);
       const dateTo = dateToGlobal.toISOString().slice(0, 10);
@@ -33,11 +33,9 @@ function TimeCompare({data}) {
 
       for (var i = 0; i < days.length - 1; i++) {
         if (days[i] === dateFrom) {
-            console.log("eh igua");
             from = i;
         }
         if (days[i] === dateTo) {
-            console.log("eh igua tb");
             to = i;
         }
       } 

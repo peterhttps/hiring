@@ -50,6 +50,12 @@ export const SearchInfos = styled.div`
         & h1 {
             font-size: 1.5rem;
         }
+
+        & {
+            width: 80%;
+            margin: 3rem auto;
+        }
+
     }
 `;
 
@@ -77,7 +83,9 @@ export const ResultBox = styled.div`
 
     @media only screen and (max-width: 900px) {
         & {
-            width: 90%;
+            width: 100%;
+            padding: 2rem 4rem;
+            margin: .5rem;
         }
     }
 `;

@@ -14,14 +14,17 @@ import {
 
 function PortfolioPage() {
     const history = useHistory();
-    const { stocks, setStocks } = useContext(StockContext);
+    const { stocks } = useContext(StockContext);
     const [isEmpty, setIsEmpty] = useState(true);
+    const [isZeroSized, setIsZeroSized] = useState(true);
 
     useEffect(() => {
         if (stocks !== null) {
             setIsEmpty(false);
         }
-        console.log(stocks);
+        if (stocks.length > 0) {
+            setIsZeroSized(false)
+        }
     }, [stocks]);
 
     return (
@@ -30,6 +33,7 @@ function PortfolioPage() {
                 <TopBar />
                 <WrapperPortfolio>
                     <h1>My Stocks</h1>
+                    {isZeroSized && <h2>You have no stock added</h2>}
                     {!isEmpty && (
                         <ContainerPortfolio>
                             {stocks.map((stock) => {
@@ -41,6 +45,7 @@ function PortfolioPage() {
                             })}
                         </ContainerPortfolio>
                     )}
+                    
                 </WrapperPortfolio>
             </Container>
         </Wrapper>

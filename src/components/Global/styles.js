@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const ActionButton = styled.button`
-    background: ${props => props.theme.colors.c400};
+    background: ${props => props.theme.colors?.c400};
     padding: 5px 10px;
     color: #FFF;
     border-radius: 4px;

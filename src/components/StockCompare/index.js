@@ -13,7 +13,11 @@ function StockCompare({ actualStockData }) {
     async function compareStocks() {
         const result = await api.get(`?function=GLOBAL_QUOTE&symbol=${compareStockName}&apikey=7MN1KILIT0TIGGLR`);
         setCompareData(result.data["Global Quote"]);
-        setShowing(true);
+        if (Object.keys(result.data["Global Quote"]).length !== 0) {
+          setShowing(true);
+        } else {
+          setShowing(false);
+        }
     }
 
     function parseValueToFloat(string) {

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerTopBar = styled.div`
-    background: ${props => props.theme.colors.c300};
+    background: ${props => props.theme.colors?.c300};
     height: 4rem;
     display: flex;
     align-items: center;
@@ -21,12 +21,12 @@ export const ContainerTopBar = styled.div`
         transition: .3s;
 
         &:hover {
-            background: ${props => props.theme.colors.c200};
+            background: ${props => props.theme.colors?.c200};
         }
     }
 
     & button {
-        background: ${props => props.theme.colors.c400};
+        background: ${props => props.theme.colors?.c400};
         border: none;
         margin-right: 2rem;
         padding: .5rem;
@@ -34,7 +34,18 @@ export const ContainerTopBar = styled.div`
         cursor: pointer;
 
         &:hover {
-            background: ${props => props.theme.colors.c500};
+            background: ${props => props.theme.colors?.c500};
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        & div {
+            font-size: .9rem;
+        }
+
+        & svg {
+            width: 1.2rem;
+            height: auto;
         }
     }
 `;

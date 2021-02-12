@@ -31,6 +31,11 @@ export const WrapperPortfolio = styled.div`
         text-align: center;
         font-size: 2.3rem;
     }
+
+    & h2 {
+        margin-top: 5rem;
+        opacity: 0.4;
+    }
 `;
 
 export const ContainerPortfolio = styled.div`
@@ -49,6 +54,14 @@ export const StockCard = styled.div`
     width: 250px;
     cursor: pointer;
     transition: .3s;
+
+    @media only screen and (max-width: 900px) {
+        & {
+            width: 100%;
+            padding: 2rem 4rem;
+            margin: .5rem;
+        }
+    }
 `;
 
 export const StockTitle = styled.h1``;

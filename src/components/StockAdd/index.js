@@ -12,7 +12,6 @@ function StockAdd({actualStock}) {
     if (stocks !== null) {
     stocks.forEach(element => {
       if (element.symbol === actualStock) {
-        console.log("TEM EM");
         setIsPresent(true);
       }  
     });
