@@ -5,7 +5,7 @@ import { ThemeContext } from "./providers/themeProvider";
 import { useContext } from "react";
 import './styles.css';
 
-function App() {
+function App(props) {
   const {theme} = useContext(ThemeContext);
 
   return (

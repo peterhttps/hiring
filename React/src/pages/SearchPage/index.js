@@ -31,6 +31,7 @@ function SearchPage() {
                     <ContainerSearch>
                         <h1>Stock Market</h1>
                         <input type="text" placeholder="Search a Stock..." onChange={handleSearchInput} onKeyPress={submitInput} value={stock}/>
+                        <p>Example: ibm, microsoft, tesla</p>
                         <button onClick={() => searchStock()}>Search</button>
                     </ContainerSearch>
                 </WrapperSearch>

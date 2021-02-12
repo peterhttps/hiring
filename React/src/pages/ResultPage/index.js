@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import LoadingSpin from 'react-loading-spin';
 
 import {
     Wrapper,
@@ -12,6 +13,7 @@ import TopBar from "../../components/TopBar";
 import { useParams, useHistory } from "react-router-dom";
 
 import api from "../../services/api";
+import { LoadingSpinContainer } from "../../components/Global/styles";
 
 function ResultPage() {
     let { id } = useParams();
@@ -22,9 +24,11 @@ function ResultPage() {
     useEffect(() => {
         async function getSearch() {
             const result = await api.get(
-                `?function=SYMBOL_SEARCH&keywords=${id}&apikey=7MN1KILIT0TIGGLR`
+                `?function=SYMBOL_SEARCH&keywords=${id}&apikey=${process.env.REACT_APP_ALPHA_API_KEY}`
             );
-
+            if (!result.data.bestMatches) {
+                history.push("/");
+            }
             setLoading(false);
             for (var keys in result.data.bestMatches) {
                 // eslint-disable-next-line no-loop-func
@@ -36,13 +40,15 @@ function ResultPage() {
         }
 
         getSearch();
-    }, [id]);
+    }, [id, history]);
 
     return (
         <Wrapper>
             <Container>
                 <TopBar />
                 <WrapperSearch>
+                    {!loading ? 
+                    <div>
                     <SearchInfos>
                         <button onClick={() => history.push("/")}>
                             {"<-"} Search Again
@@ -65,6 +71,8 @@ function ResultPage() {
                             })
                         )}
                     </ContainerSearch>
+                    </div>
+                    : <LoadingSpinContainer><LoadingSpin /></LoadingSpinContainer>}
                 </WrapperSearch>
             </Container>
         </Wrapper>

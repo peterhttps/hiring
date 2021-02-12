@@ -8,6 +8,7 @@ export const searchButton = styled.div`
 export const Wrapper = styled.div`
     height: 100vh;
     flex: 1;
+
 `;
 
 export const Container = styled.div`
@@ -15,6 +16,7 @@ export const Container = styled.div`
     flex-direction: column;
     flex: 1;
     height: 100%;
+   
 `;
 
 
@@ -23,6 +25,7 @@ export const WrapperSearch = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem;
 `;
 
 export const ContainerSearch = styled.div`
@@ -46,7 +49,7 @@ export const ContainerSearch = styled.div`
     }
 
     & button {
-        background: ${props => props.theme.colors.c400};
+        background: ${props => props.theme.colors?.c400};
         border: none;
         color: white;
         padding: 1rem 2rem;
@@ -60,6 +63,18 @@ export const ContainerSearch = styled.div`
     }
 
     & button:hover {
-        background: ${props => props.theme.colors.c500};
+        background: ${props => props.theme.colors?.c500};
     }
+
+    & p {
+        margin-top: 1rem;
+        opacity: 0.6;
+    }
+
+    @media only screen and (max-width: 900px) {
+        & input {
+            width: 80%;
+        }
+    }
+
 `;
