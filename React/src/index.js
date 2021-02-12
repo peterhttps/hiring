@@ -5,12 +5,12 @@ import { StockProvider } from "./providers/stockProvider";
 import { ThemeChangeProvider } from "./providers/themeProvider";
 
 ReactDOM.render(
-    <React.StrictMode>
-        <ThemeChangeProvider>
-            <StockProvider>
-                <App />
-            </StockProvider>
-        </ThemeChangeProvider>
-    </React.StrictMode>,
-    document.getElementById("root")
+  <React.StrictMode>
+    <ThemeChangeProvider>
+      <StockProvider>
+        <App />
+      </StockProvider>
+    </ThemeChangeProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

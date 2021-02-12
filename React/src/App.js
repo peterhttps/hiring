@@ -3,10 +3,10 @@ import { GlobalStyles } from "./themes/GlobalStyle";
 import Routes from "./routes";
 import { ThemeContext } from "./providers/themeProvider";
 import { useContext } from "react";
-import './styles.css';
+import "./styles.css";
 
 function App(props) {
-  const {theme} = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <ThemeProvider theme={theme}>

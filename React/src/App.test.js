@@ -75,7 +75,6 @@ test("render StockPage component", () => {
   expect(Tree).toMatchSnapshot();
 });
 
-
 test("render SearchPage component", () => {
   const Component = TestRenderer.create(<SearchPage />);
   const Tree = Component.toJSON();

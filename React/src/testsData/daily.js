@@ -1,5 +1,4 @@
 export const mockData = {
-
     "2021-02-11": {
         "1. open": "122.0",
         "2. high": "122.205",
@@ -690,5 +689,4 @@ export const mockData = {
         "7. dividend amount": "0.0000",
         "8. split coefficient": "1.0"
       },
-
 }
