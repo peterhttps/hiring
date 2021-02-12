@@ -1,47 +1,79 @@
-# Background
+<h1 align="center">Stock Market</h1>
+<h4 align="center">
+  Quer analizar o mercado financeiro de um jeito simples?
+</h4>
+<p align="center">
+  <img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/peterhttps/hiring"/>
+  <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/peterhttps/hiring"/>
+   <img alt="GitHub Stars" src="https://img.shields.io/github/stars/peterhttps/hiring"/>
+   <img alt="GitHub Issues" src="https://img.shields.io/github/issues/peterhttps/hiring"/>
+  </p>
 
-Uma corretora de ações está desenvolvendo um sistema para permitir que pequenos investidores possam tomar decisões melhores sobre seu portfólio. Uma das funcionalidades importantes é a de verificar o desempenho de uma ação em cinco cenários:
-
-   - Preço atual;
-   - Preço histórico;
-   - Preço atual em comparação a outras ações;
-   - Projeção de ganhos com compra em data específica.
-   
-Para isso, a equipe de software da empresa optou por desenvolver um WebAPP que dará visibilidade aos dados. Sua missão para este teste é implementar este WebAPP
-
-# Requisitos técnicos da solução
-
-Sua solução deverá ter testes automatizados.
-
-Para obter as informações das ações utilize a Alpha Vantage (https://www.alphavantage.co). Se você encontrar alguma biblioteca para tal, você está autorizado a utilizar.
-
-O tratamento de erros não será explicitado nos endpoints. O candidato ou candidata poderá inferir casos que poderão gerar erros ou duplicidades nos dados, e tratá-los de acordo. A ausência de tratamento não desqualifica a proposta; a presença, no entanto, contará pontos a favor.
-
-## Projeção de ganhos
-
-A ideia é implementar algo simples, sem preocupações com dividendos, taxas administrativas ou outras incumbências que afetariam o montante total. Em sendo assim, pressuponha que a compradora investiu seu dinheiro numa determinada quantidade de ações de uma empresa em alguma data no passado, e que deseja saber quanto teria ganhado ou perdido caso o fizesse.
-
-# Como enviar sua proposta
-
-- Crie um fork deste repositório;
-- Implemente sua solução, fazendo commits da maneira que faria em um projeto profissional;
-- Substitua este README com um específico para sua aplicação, indicando como rodá-la, e como executar os testes (fique à vontade para inserir mais detalhes técnicos, caso deseje);
-- Abra um pull request para este repositório.
-
-# Detalhamento
-
-## WebAPP
-
-O importante nesta parte do desafio é que saibamos como você lida com os componentes que formam as técnicas contemporâneas de desenvolvimento client-side, no que tange processamento de assets, separação de responsabilidades, minificação, armazenamento local, etc. Por isso, estética não é primordial.
-
-As funcionalidades esperadas são:
-
-- Incluir ações no portifólio;
-- Ver situação atual das ações (último preço e data e hora da atualização);
-- Ver histórico de preços de uma ação, podendo delimitar datas de início e fim;
-- Fazer projeção de ganhos de uma ação, determinando o número de ações compradas e a data de compra no passado.
-
-Se você não tiver ideia de como organizar essas funcionalidades, não há problema nenhum em se inspirar no Google Finance ou fazer uma arquitetura master-detail simples.
+<p align="center">
+	<a href="#white_check_mark-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-como-iniciar">Como iniciar localmente</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-testes">Testes</a>
+</p>
 
 
-https://www.alphavantage.co
+![](https://i.imgur.com/MJ4GMav.png)
+
+<p align="center">
+  <a href="https://stock-market-one.vercel.app/">Testar aplicação</a>
+</p>
+
+## :white_check_mark: Features
+Dentre as features temos:
+-  Incluir ações no portfólio (persistem localmente mesmo após sair da aplicação)
+- Ver informações de uma ação
+- Ver histórico de preços de uma ação 
+-  Fazer simulações de ganhos ou perdas baseado em datas passadas
+-  Comparar com ações com outras ações
+- Responsividade
+- Tema escuro 
+
+## :rocket: Tecnologias 
+
+Este projeto foi desenvolvido com React.js e utiliza styled-components para estilização, além da Context API e 
+Local Storage para armazenamento local de informações.  
+
+-  [ReactJS](https://reactjs.org/)
+-  [Context API](https://reactjs.org/docs/context.html)
+- [Redux-Persist](https://github.com/rt2zz/redux-persist)
+-  [Hooks](https://reactjs.org/docs/hooks-reference.html)
+- [styled-components](https://styled-components.com/)
+
+## :information_source: Como iniciar
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/peterhttps/hiring
+
+# Entre na pasta React
+$ cd React
+
+# Instale as dependências
+$ yarn install
+
+# Suba a aplicação
+$ yarn start
+```
+Você deve criar um arquivo chamado .env na pasta "React" e adicionar à variável de ambiente REACT_APP_ALPHA_API_KEY sua api key da [Alpha Vantage](https://www.alphavantage.co/)
+`REACT_APP_ALPHA_API_KEY=suakey`
+
+## :memo: Testes
+
+Testes unitários de componentes com a criação de Mock.
+
+<p>Para rodar os testes automatizados</p>
+
+```bash
+# Rodar testes
+$ yarn test
+```
+
+---
+
+
+:triangular_flag_on_post: [Get in touch!](https://www.linkedin.com/in/peterparts/)
