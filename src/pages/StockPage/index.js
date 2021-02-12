@@ -21,8 +21,8 @@ function StockPage() {
     useEffect(() => {
 
         async function getStock() {
-            const resultInterday = await api.get(`?function=GLOBAL_QUOTE&symbol=${id}&apikey=7MN1KILIT0TIGGLR`);
-            const resultDaily = await api.get(`?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${id}&outputsize=full&apikey=7MN1KILIT0TIGGLR`);
+            const resultInterday = await api.get(`?function=GLOBAL_QUOTE&symbol=${id}&apikey=${process.env.REACT_APP_KEY}`);
+            const resultDaily = await api.get(`?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${id}&outputsize=full&apikey=${process.env.REACT_APP_KEY}`);
             const timeSeries = resultDaily.data["Time Series (Daily)"];
             
             setStockInfos(resultInterday.data["Global Quote"]); 
