@@ -32,6 +32,8 @@ export const ContainerTopBar = styled.div`
         padding: .5rem;
         border-radius: 50%;
         cursor: pointer;
+        display: flex;
+        align-items: center;
 
         &:hover {
             background: ${props => props.theme.colors?.c500};
