@@ -8,7 +8,7 @@ exports[`render SearchPage component 1`] = `
     className="sc-dlfnbm bFdpYG"
   >
     <div
-      className="sc-jSgupP eYLJnf"
+      className="sc-jSgupP MfxGP"
     >
       <button
         onClick={[Function]}
@@ -145,7 +145,7 @@ exports[`render StockPage component 1`] = `
     className="sc-fodVxV emhgxZ"
   >
     <div
-      className="sc-jSgupP eYLJnf"
+      className="sc-jSgupP MfxGP"
     >
       <button
         onClick={[Function]}
@@ -319,7 +319,7 @@ exports[`render TimeCompare component 1`] = `
 
 exports[`render TopBar component 1`] = `
 <div
-  className="sc-jSgupP eYLJnf"
+  className="sc-jSgupP MfxGP"
 >
   <button
     onClick={[Function]}

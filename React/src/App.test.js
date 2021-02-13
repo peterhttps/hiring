@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 import TestRenderer from "react-test-renderer"; // ES6
+import { Router } from "react-router-dom";
+import { createMemoryHistory } from "history";
 
 // Mock
 import { mockData } from "./testsData/daily";
@@ -16,9 +18,6 @@ import TimeCompare from "./components/TimeCompare";
 
 // Pages
 import StockPage from "./pages/StockPage";
-
-import { Router } from "react-router-dom";
-import { createMemoryHistory } from "history";
 import SearchPage from "./pages/SearchPage";
 
 test("render SockGraph component", () => {
@@ -74,6 +73,7 @@ test("render StockPage component", () => {
   const Tree = Component.toJSON();
   expect(Tree).toMatchSnapshot();
 });
+
 
 test("render SearchPage component", () => {
   const Component = TestRenderer.create(<SearchPage />);
